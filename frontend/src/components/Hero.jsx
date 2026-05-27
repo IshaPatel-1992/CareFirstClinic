@@ -8,7 +8,6 @@ export default function Hero() {
       <section className="doctors-marquee">
         <div className="doctors-marquee-track">
           <span>Walk-Ins Welcome</span>
-          <span>Male & Female Family Physicians Available</span>
           <span>Family Medicine Services</span>
           <span>Preventive Health & Annual Physicals</span>
           <span>Professional Driver Medical Examinations</span>

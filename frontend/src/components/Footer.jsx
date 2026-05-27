@@ -40,7 +40,7 @@ export default function Footer() {
               <Link to="/">Home</Link>
               <a href="/#about">About</a>
               <a href="/#services">Services</a>
-              <a href="/#departments">Departments</a>
+              <a href="/#why-us">Why Choose Us</a>
               <Link to="/doctors">Doctors</Link>
               <Link to="/appointment">Appointment</Link>
               <Link to="/contact">Contact</Link>
