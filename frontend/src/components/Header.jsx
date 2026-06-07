@@ -28,16 +28,7 @@ export default function Header() {
 
   return (
     <header className="site-header">
-      <div className="top-bar">
-        <span>
-          <FaPhoneAlt /> 999-999-9999
-        </span>
-        <span>
-          <FaMapMarkerAlt /> 37 - 1301 8th St SW, Airdrie, AB
-        </span>
-      </div>
-
-      <div className="main-nav">
+      <div className="main-nav compact-nav">
         <Link to="/" className="brand" onClick={goHomeTop}>
           <img
             src={logo}
@@ -47,15 +38,9 @@ export default function Header() {
 
           <div className="brand-text">
             <h1>Care First Medical Clinic</h1>
-            <p>Walk-Ins Welcome</p>
+            <p>Modern Family Healthcare</p>
           </div>
         </Link>
-
-        <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
 
         <nav className={menuOpen ? "nav open" : "nav"}>
           <button className="nav-scroll-btn" type="button" onClick={goHomeTop}>
@@ -78,14 +63,6 @@ export default function Header() {
             Services
           </button>
 
-          <button
-            className="nav-scroll-btn"
-            type="button"
-            onClick={() => scrollToSection("why-us")}
-          >
-            Why Choose Us
-          </button>
-
           <NavLink to="/doctors" onClick={() => setMenuOpen(false)}>
             Doctors
           </NavLink>
@@ -98,6 +75,32 @@ export default function Header() {
             Contact
           </NavLink>
         </nav>
+
+        <div className="header-actions">
+          <a href="tel:19999999999" className="header-phone">
+            <FaPhoneAlt />
+            <span>999-999-9999</span>
+          </a>
+
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=37%20-%201301%208th%20St%20SW%20Airdrie%20Alberta"
+            target="_blank"
+            rel="noreferrer"
+            className="header-location"
+          >
+            <FaMapMarkerAlt />
+          </a>
+        </div>
+
+        <button
+          className="menu-toggle"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle navigation menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </header>
   );

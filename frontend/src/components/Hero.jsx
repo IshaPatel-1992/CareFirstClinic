@@ -1,76 +1,140 @@
 import { Link } from "react-router-dom";
-//import heroVideo from "../assets/services/1090224597-preview.mp4";
+import {
+  Phone,
+  MapPin,
+  Clock3,
+  UserPlus,
+  HeartPulse,
+  Stethoscope,
+  ShieldCheck,
+  Baby,
+} from "lucide-react";
+
 import heroImg from "../assets/banners/asset-generation-bc4c827a-7af7-4e53-bfe8-fa00bc15c284-2.png";
+
+const marqueeItems = [
+  "Accepting New Patients",
+  "Family Medicine",
+  "Walk-In Medical Care",
+  "Preventive Healthcare",
+  "Annual Physical Examinations",
+  "Women's Health",
+  "Men's Health",
+  "Paediatric Care",
+  "Senior & Elderly Care",
+  "Chronic Disease Management",
+  "Mental Health Therapy",
+  "Physiotherapy Services",
+  "Respiratory Therapy",
+  "Home Care Support",
+  "Health Screening Programs",
+  "Immunisations & Vaccinations",
+  "Professional Driver Medical Exams",
+  "Pharmacy Services",
+  "Medication Management",
+  "Patient Wellness Programs",
+];
+const services = [
+  { label: "Family Medicine", icon: <Stethoscope size={18} /> },
+  { label: "Walk-In Care", icon: <HeartPulse size={18} /> },
+  { label: "Mental Health", icon: <ShieldCheck size={18} /> },
+  { label: "Physiotherapy", icon: <Baby size={18} /> },
+  { label: "Pharmacy Services", icon: <HeartPulse size={18} /> },
+  { label: "Home Care", icon: <ShieldCheck size={18} /> },
+];
 
 export default function Hero() {
   return (
     <>
       <section className="doctors-marquee">
         <div className="doctors-marquee-track">
-          <span>Walk-Ins Welcome</span>
-          <span>Family Medicine Services</span>
-          <span>Preventive Health & Annual Physicals</span>
-          <span>Professional Driver Medical Examinations</span>
-          <span>Pediatric Care Services</span>
-          <span>Women’s Health Services</span>
-          <span>Chronic Disease Management</span>
-          <span>Vaccinations & Immunization Services</span>
+          {marqueeItems.map((item, index) => (
+            <span key={index}>{item}</span>
+          ))}
         </div>
       </section>
 
-      <section className="hero video-hero">
-        {/* <video className="hero-video" autoPlay muted loop playsInline>
-          <source src={heroVideo} type="video/mp4" />
-        </video> */}
-        <img src={heroImg} alt="Care First Medical Clinic" className="hero-image" />
+      <section className="care-hero-split">
+        <div className="care-hero-split-bg">
+          <img src={heroImg} alt="Care First Medical Clinic" />
+          <div className="care-hero-split-overlay" />
+        </div>
 
-        <div className="hero-overlay" />
+        <div className="care-hero-split-inner">
+          <aside className="care-hero-clinic-card">
+            <span className="care-hero-card-label">
+              <HeartPulse size={16} />
+              Clinic Information
+            </span>
 
-        <div className="hero-inner">
-          <div className="hero-content">
-            <span className="hero-label">Care First Medical Clinic</span>
+            <h3>Care First Medical Clinic</h3>
 
-            <h1>Compassionate Healthcare for Your Family</h1>
+            <div className="care-clinic-line">
+              <Phone size={19} />
+              <div>
+                <strong>Phone</strong>
+                <span>999-999-9999</span>
+              </div>
+            </div>
+
+            <div className="care-clinic-line">
+              <MapPin size={19} />
+              <div>
+                <strong>Location</strong>
+                <span>37 - 1301 8th St SW, Airdrie, AB</span>
+              </div>
+            </div>
+
+            <div className="care-clinic-line">
+              <Clock3 size={19} />
+              <div>
+                <strong>Clinic Hours</strong>
+                <span>Hours will be updated soon</span>
+              </div>
+            </div>
+
+            <div className="care-clinic-note">
+              Walk-ins welcome. Please call ahead to confirm current
+              availability.
+            </div>
+          </aside>
+
+          <div className="care-hero-main-content">
+            <span className="care-hero-main-badge">
+              <UserPlus size={16} />
+              Accepting New Patients
+            </span>
+
+            <h1>
+              Your Community Healthcare
+              <br />
+              Destination in Airdrie
+            </h1>
 
             <p>
-              Walk-ins welcome. Providing reliable, modern, and patient-focused
-              medical care for individuals and families in Airdrie.
+              Accessible, compassionate, and patient-focused medical care
+              for children, adults, seniors, and families.
             </p>
 
-            <div className="hero-actions">
+            <div className="care-hero-main-actions">
               <Link to="/appointment" className="btn primary">
                 Book Appointment
               </Link>
 
-              <a href="/#services" className="btn secondary">
-                View Services
-              </a>
+              <Link to="/contact" className="btn secondary">
+                Contact Clinic
+              </Link>
             </div>
           </div>
+        </div>
 
-          <div className="hero-contact-card">
-            <h3>Contact Clinic</h3>
-
-            <p>
-              <strong>Phone:</strong> 999-999-9999
-            </p>
-
-            <p>
-              <strong>Clinic Hours:</strong> Hours will be updated soon
-            </p>
-
-            <p>
-              <strong>Walk-Ins:</strong> Welcome
-            </p>
-
-            <p>
-              <strong>Location:</strong> 37 - 1301 8th St SW, Airdrie, Alberta
-            </p>
-
-            <p>
-              <strong>Landmark:</strong> Corner of 8th St and Yankee Valley Blvd
-            </p>
-          </div>
+        <div className="care-hero-service-strip">
+          {services.map((service) => (
+            <div className="care-hero-service-item" key={service.label}>
+              {service.icon}
+              <span>{service.label}</span>
+            </div>
+          ))}
         </div>
       </section>
     </>

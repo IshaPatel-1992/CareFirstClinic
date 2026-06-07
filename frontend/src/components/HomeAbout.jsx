@@ -1,33 +1,35 @@
 import { Link } from "react-router-dom";
 import {
-  MapPin,
   HeartPulse,
   Users,
   Stethoscope,
   ShieldPlus,
-  PhoneCall,
+  Brain,
+  Dumbbell,
+  Home,
+  Pill,
 } from "lucide-react";
 
 const careHighlights = [
   {
-    title: "Family Medicine Clinic",
-    text: "Primary care support for individuals and families.",
+    title: "Family & Walk-In Care",
+    text: "Accessible primary care and walk-in support for common health concerns.",
     icon: <Stethoscope size={28} />,
   },
   {
-    title: "Walk-In Access",
-    text: "Walk-ins are welcome for care inquiries and common medical concerns.",
-    icon: <PhoneCall size={28} />,
+    title: "Mental Health Support",
+    text: "Therapy and wellness support services planned for patient care needs.",
+    icon: <Brain size={28} />,
   },
   {
-    title: "Family-Focused Care",
-    text: "Healthcare support for children, adults, seniors, and families.",
-    icon: <Users size={28} />,
+    title: "Physiotherapy Services",
+    text: "Support for mobility, recovery, pain management, and physical wellness.",
+    icon: <Dumbbell size={28} />,
   },
   {
-    title: "Preventive Care",
-    text: "Support for checkups, screenings, immunizations, and wellness needs.",
-    icon: <ShieldPlus size={28} />,
+    title: "Pharmacy & Home Care",
+    text: "Additional healthcare support services planned for patient convenience.",
+    icon: <Pill size={28} />,
   },
 ];
 
@@ -38,12 +40,12 @@ export default function HomeAbout() {
         <div className="care-about-header">
           <span className="section-label center">About Care First</span>
 
-          <h2>Healthcare That Starts With Care</h2>
+          <h2>A Community Healthcare Centre for Airdrie Families</h2>
 
           <p>
-            Care First Medical Clinic is a family medicine and walk-in clinic in
-            Airdrie, focused on accessible, compassionate, and patient-centered
-            care.
+            Care First Medical Clinic is being developed as an accessible,
+            patient-focused healthcare centre offering family medicine, walk-in
+            care, wellness services, and supportive health programs.
           </p>
         </div>
 
@@ -53,21 +55,23 @@ export default function HomeAbout() {
               <HeartPulse size={44} />
             </div>
 
-            <span className="care-about-badge">Care First Medical Clinic</span>
+            <span className="care-about-badge">
+              Care First Medical Clinic
+            </span>
 
-            <h3>Your Health Comes First</h3>
+            <h3>More Than a Clinic — Care That Connects</h3>
 
             <p>
-              Our clinic is built around making healthcare easier to access for
-              individuals and families. We provide common family medicine,
-              preventive care, walk-in support, and ongoing health guidance in a
-              welcoming clinic environment.
+              Our goal is to make healthcare easier to access by bringing
+              together medical care, preventive health, therapy services,
+              pharmacy support, and wellness-focused programs in one convenient
+              location.
             </p>
 
             <p>
               Located in Airdrie near 8th St SW and Yankee Valley Blvd, Care
-              First Medical Clinic is here to support patients with respectful,
-              reliable, and compassionate care.
+              First Medical Clinic is designed to support children, adults,
+              seniors, and families with respectful and compassionate care.
             </p>
 
             <div className="care-about-actions">
@@ -83,26 +87,33 @@ export default function HomeAbout() {
 
           <div className="care-about-info-panel">
             <div className="care-info-line">
-              <Stethoscope size={22} />
+              <Users size={22} />
               <div>
-                <strong>Walk-Ins Welcome</strong>
-                <span>Please call the clinic for current hours and availability.</span>
+                <strong>Walk-Ins & New Patients</strong>
+                <span>
+                  Walk-ins welcome. New patients accepted. Please call ahead to
+                  confirm provider availability and clinic hours.
+                </span>
               </div>
             </div>
 
             <div className="care-info-line">
-              <MapPin size={22} />
+              <ShieldPlus size={22} />
               <div>
-                <strong>Clinic Location</strong>
+                <strong>Integrated Health Services</strong>
+                <span>
+                  Planned services include family medicine, mental health,
+                  physiotherapy, respiratory therapy, pharmacy, and home care
+                  support.
+                </span>
+              </div>
+            </div>
+
+            <div className="care-info-line">
+              <Home size={22} />
+              <div>
+                <strong>Convenient Airdrie Location</strong>
                 <span>37 - 1301 8th St SW, Airdrie, Alberta</span>
-              </div>
-            </div>
-
-            <div className="care-info-line">
-              <HeartPulse size={22} />
-              <div>
-                <strong>Patient-Focused Care</strong>
-                <span>Modern healthcare with a caring, family-first approach.</span>
               </div>
             </div>
           </div>
