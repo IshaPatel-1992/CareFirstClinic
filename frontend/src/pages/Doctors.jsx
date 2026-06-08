@@ -10,6 +10,8 @@ import {
 
 import heroImg from "../assets/banners/shutterstock_2270845943.jpg";
 
+import { SITE_INFO } from "../data/siteInfo";
+
 const doctors = [
   {
     name: "Doctor Name Coming Soon",
@@ -116,22 +118,28 @@ export default function Doctors() {
                 <div className="care-doctor-contact">
                   <p>
                     <FaPhoneAlt />
-                    <span>999-999-9999</span>
+                    <a href={`tel:${SITE_INFO.phoneLink}`}>{SITE_INFO.phone}</a>
                   </p>
 
                   <p>
                     <FaEnvelope />
-                    <span>Email Coming Soon</span>
+                    <a href={`mailto:${SITE_INFO.email}`}>{SITE_INFO.email}</a>
                   </p>
 
                   <p>
                     <FaMapMarkerAlt />
-                    <span>37 - 1301 8th St SW, Airdrie, Alberta</span>
+                    <span>{SITE_INFO.address}</span>
                   </p>
 
                   <p>
                     <FaClock />
-                    <span>Please call for clinic hours and availability.</span>
+                    <span>
+                      {SITE_INFO.hours.weekdays}
+                      <br />
+                      {SITE_INFO.hours.saturday}
+                      <br />
+                      {SITE_INFO.hours.sunday}
+                    </span>
                   </p>
                 </div>
               </article>

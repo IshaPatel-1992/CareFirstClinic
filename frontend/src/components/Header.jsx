@@ -1,7 +1,7 @@
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
-import logo from "../assets/logostyle2.png";
+import logo from "../assets/care-first-medical-clinic-logo.png";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -72,9 +72,9 @@ export default function Header() {
         </nav>
 
         <div className="header-actions">
-          <a href="tel:19999999999" className="header-phone">
+          <a href="tel:15872871837" className="header-phone">
             <FaPhoneAlt />
-            <span>999-999-9999</span>
+            <span>587-287-1837</span>
           </a>
 
           <a

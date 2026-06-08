@@ -56,23 +56,31 @@ export default function Footer() {
                 <span>
                   37 - 1301 8th St SW
                   <br />
-                  Airdrie, Alberta
+                  Airdrie, AB T4B 3Y2
                 </span>
               </p>
 
               <p>
                 <FaPhoneAlt />
-                <a href="tel:19999999999">999-999-9999</a>
+                <a href="tel:+15872871837">587-287-1837</a>
               </p>
 
               <p>
                 <FaEnvelope />
-                <span>Email Coming Soon</span>
+                <a href="mailto:info@carefirstclinic.ca">
+                  info@carefirstclinic.ca
+                </a>
               </p>
 
               <p>
                 <FaClock />
-                <span>Please call for clinic hours.</span>
+                <span>
+                  Mon–Fri: 9:00 AM – 8:00 PM
+                  <br />
+                  Saturday: 10:00 AM – 3:00 PM
+                  <br />
+                  Sunday: 10:00 AM – 2:00 PM
+                </span>
               </p>
             </div>
           </div>

@@ -6,7 +6,11 @@ import {
   FaWalking,
 } from "react-icons/fa";
 
+import { SITE_INFO } from "../data/siteInfo";
+
 export default function Contact() {
+  const mapQuery = encodeURIComponent(SITE_INFO.address);
+
   return (
     <>
       <section className="care-contact-hero">
@@ -26,86 +30,63 @@ export default function Contact() {
             <span className="section-label center">Get In Touch</span>
             <h2>Contact Care First Medical Clinic</h2>
             <p>
-              Clinic details are being finalized. Please call the clinic for
-              current hours, availability, and appointment information.
+              Please call or email the clinic for current appointment
+              availability, walk-ins, and patient information.
             </p>
           </div>
 
-          <div className="care-contact-grid">
-            <div className="care-contact-card primary-card">
-              <div className="care-contact-icon">
+          <div className="care-contact-clean-layout">
+            <div className="care-contact-main-card">
+              <div className="care-contact-icon large">
                 <FaPhoneAlt />
               </div>
 
-              <h3>Call the Clinic</h3>
+              <h3>Call or Email the Clinic</h3>
 
               <p>
-                For appointments, walk-in availability, and general clinic
-                inquiries, please contact the clinic directly.
+                Our clinic team can assist with appointment requests, walk-in
+                availability, patient inquiries, and general clinic information.
               </p>
 
-              <a href="tel:19999999999" className="contact-action-btn phone-btn">
+              <a
+                href={`tel:${SITE_INFO.phoneLink}`}
+                className="contact-main-phone"
+              >
                 <FaPhoneAlt />
-                Call Clinic
+                {SITE_INFO.phone}
               </a>
 
-              <div className="care-contact-detail">
-                <strong>Phone</strong>
-                <span>999-999-9999</span>
-              </div>
-            </div>
-
-            <div className="care-contact-card">
-              <div className="care-contact-icon">
+              <a
+                href={`mailto:${SITE_INFO.email}`}
+                className="contact-main-email"
+              >
                 <FaEnvelope />
-              </div>
-
-              <h3>Email</h3>
-
-              <p>
-                Email details will be updated once confirmed by the clinic.
-              </p>
-
-              <div className="care-contact-detail">
-                <strong>Email</strong>
-                <span>Email Coming Soon</span>
-              </div>
+                {SITE_INFO.email}
+              </a>
             </div>
 
-            <div className="care-contact-card">
-              <div className="care-contact-icon">
-                <FaClock />
-              </div>
-
+            <aside className="care-contact-side-panel">
               <h3>Clinic Hours</h3>
 
-              <p>
-                Clinic hours are not finalized yet. Please call before visiting.
-              </p>
-
-              <div className="care-contact-detail">
-                <strong>Hours</strong>
-                <span>Hours will be updated soon</span>
+              <div className="contact-side-line">
+                <FaClock />
+                <span>
+                  {SITE_INFO.hours.weekdays}
+                  <br />
+                  {SITE_INFO.hours.saturday}
+                  <br />
+                  {SITE_INFO.hours.sunday}
+                </span>
               </div>
-            </div>
 
-            <div className="care-contact-card">
-              <div className="care-contact-icon">
+              <div className="contact-side-note">
                 <FaWalking />
+                <span>
+                  Walk-ins are welcome. Please call ahead to confirm current
+                  availability.
+                </span>
               </div>
-
-              <h3>Walk-Ins</h3>
-
-              <p>
-                Walk-ins are welcome. Availability may vary depending on clinic
-                schedule and provider availability.
-              </p>
-
-              <div className="care-contact-detail">
-                <strong>Status</strong>
-                <span>Walk-Ins Welcome</span>
-              </div>
-            </div>
+            </aside>
           </div>
 
           <div className="care-location-card">
@@ -115,17 +96,17 @@ export default function Contact() {
               <h3>Visit Care First Medical Clinic</h3>
 
               <p>
-                Located at 37 - 1301 8th St SW, Airdrie, Alberta, near the
-                corner of 8th St and Yankee Valley Blvd.
+                Located in Airdrie, Alberta. Please use the map below for
+                directions to the clinic.
               </p>
 
               <div className="map-address-pill">
                 <FaMapMarkerAlt />
-                <span>37 - 1301 8th St SW, Airdrie, Alberta</span>
+                <span>{SITE_INFO.address}</span>
               </div>
 
               <a
-                href="https://www.google.com/maps/search/?api=1&query=37%20-%201301%208th%20St%20SW%20Airdrie%20Alberta"
+                href={`https://www.google.com/maps/search/?api=1&query=${mapQuery}`}
                 target="_blank"
                 rel="noreferrer"
                 className="map-direction-btn"
@@ -138,7 +119,7 @@ export default function Contact() {
             <div className="map-section">
               <iframe
                 title="Care First Medical Clinic Map"
-                src="https://www.google.com/maps?q=37%20-%201301%208th%20St%20SW%20Airdrie%20Alberta&output=embed"
+                src={`https://www.google.com/maps?q=${mapQuery}&output=embed`}
                 loading="lazy"
               ></iframe>
             </div>

@@ -3924,3 +3924,249 @@ main {
     border-radius: 24px;
   }
 }
+
+
+.care-appointment-layout-clean {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 28px;
+  margin-top: 42px;
+}
+
+.care-appointment-main-card,
+.care-appointment-side-panel {
+  background: var(--white);
+  border-radius: 30px;
+  padding: 38px;
+  border: 1px solid var(--border-soft);
+  box-shadow: var(--shadow);
+}
+
+.care-appointment-main-card {
+  border-left: 6px solid var(--teal-main);
+}
+
+.care-appointment-icon.large {
+  width: 78px;
+  height: 78px;
+  border-radius: 24px;
+  font-size: 34px;
+  margin-bottom: 22px;
+}
+
+.care-appointment-main-card h3,
+.care-appointment-side-panel h3 {
+  color: var(--blue-dark);
+  font-size: 30px;
+  margin-bottom: 14px;
+}
+
+.care-appointment-main-card p {
+  color: var(--text-muted);
+  font-size: 17px;
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.appointment-main-phone,
+.appointment-main-email {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: fit-content;
+  margin-top: 14px;
+  font-weight: 900;
+  border-radius: 999px;
+  padding: 14px 22px;
+}
+
+.appointment-main-phone {
+  background: var(--gradient-primary);
+  color: var(--white);
+}
+
+.appointment-main-email {
+  background: var(--teal-soft);
+  color: var(--teal-dark);
+}
+
+.appointment-side-line {
+  display: flex;
+  gap: 14px;
+  color: var(--text-dark);
+  font-weight: 800;
+  line-height: 1.8;
+  margin-top: 20px;
+}
+
+.appointment-side-line svg {
+  color: var(--teal-main);
+  min-width: 20px;
+  margin-top: 5px;
+}
+
+.appointment-side-note {
+  margin-top: 26px;
+  background: linear-gradient(135deg, var(--blue-soft), var(--teal-soft));
+  color: var(--blue-dark);
+  padding: 18px;
+  border-radius: 18px;
+  font-weight: 800;
+  line-height: 1.6;
+}
+
+.care-appointment-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.care-appointment-steps div {
+  background: var(--white);
+  border-radius: 22px;
+  padding: 24px;
+  border: 1px solid var(--border-soft);
+  box-shadow: var(--shadow);
+}
+
+.care-appointment-steps svg {
+  color: var(--teal-main);
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.care-appointment-steps strong {
+  display: block;
+  color: var(--blue-dark);
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.care-appointment-steps span {
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .care-appointment-layout-clean,
+  .care-appointment-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .appointment-main-phone,
+  .appointment-main-email {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.care-contact-clean-layout {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 28px;
+  margin-top: 42px;
+  margin-bottom: 34px;
+}
+
+.care-contact-main-card,
+.care-contact-side-panel {
+  background: var(--white);
+  border-radius: 30px;
+  padding: 38px;
+  border: 1px solid var(--border-soft);
+  box-shadow: var(--shadow);
+}
+
+.care-contact-main-card {
+  border-left: 6px solid var(--teal-main);
+}
+
+.care-contact-icon.large {
+  width: 78px;
+  height: 78px;
+  border-radius: 24px;
+  font-size: 34px;
+  margin-bottom: 22px;
+}
+
+.care-contact-main-card h3,
+.care-contact-side-panel h3 {
+  color: var(--blue-dark);
+  font-size: 30px;
+  margin-bottom: 14px;
+}
+
+.care-contact-main-card p {
+  color: var(--text-muted);
+  font-size: 17px;
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.contact-main-phone,
+.contact-main-email {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: fit-content;
+  margin-top: 14px;
+  font-weight: 900;
+  border-radius: 999px;
+  padding: 14px 22px;
+}
+
+.contact-main-phone {
+  background: var(--gradient-primary);
+  color: var(--white);
+}
+
+.contact-main-email {
+  background: var(--teal-soft);
+  color: var(--teal-dark);
+}
+
+.contact-side-line {
+  display: flex;
+  gap: 14px;
+  color: var(--text-dark);
+  font-weight: 800;
+  line-height: 1.8;
+  margin-top: 20px;
+}
+
+.contact-side-line svg {
+  color: var(--teal-main);
+  min-width: 20px;
+  margin-top: 5px;
+}
+
+.contact-side-note {
+  margin-top: 26px;
+  background: linear-gradient(135deg, var(--blue-soft), var(--teal-soft));
+  color: var(--blue-dark);
+  padding: 18px;
+  border-radius: 18px;
+  font-weight: 800;
+  line-height: 1.6;
+  display: flex;
+  gap: 12px;
+}
+
+.contact-side-note svg {
+  color: var(--teal-main);
+  min-width: 18px;
+  margin-top: 4px;
+}
+
+@media (max-width: 900px) {
+  .care-contact-clean-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-main-phone,
+  .contact-main-email {
+    width: 100%;
+    justify-content: center;
+  }
+}

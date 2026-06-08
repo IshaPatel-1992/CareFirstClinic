@@ -3,12 +3,12 @@ import {
   FaEnvelope,
   FaUserPlus,
   FaClock,
-  FaClinicMedical,
   FaCalendarCheck,
   FaWalking,
 } from "react-icons/fa";
 
 import heroImage from "../assets/banners/shutterstock_1122624086.jpg";
+import { SITE_INFO } from "../data/siteInfo";
 
 export default function Appointment() {
   return (
@@ -31,8 +31,8 @@ export default function Appointment() {
           <h1>Book Your Visit With Care First</h1>
 
           <p>
-            Please call Care First Medical Clinic for appointments, walk-in
-            availability, clinic hours, and patient inquiries.
+            Call the clinic for appointment requests, walk-in availability, new
+            patient information, and general inquiries.
           </p>
         </div>
       </section>
@@ -41,110 +41,81 @@ export default function Appointment() {
         <div className="care-appointment-wrapper">
           <div className="care-appointment-header">
             <span className="section-label center">Patient Information</span>
-
             <h2>Simple Ways to Contact the Clinic</h2>
-
             <p>
-              Online booking details are not confirmed yet. Please contact the
-              clinic directly for current appointment availability.
+              Please contact Care First Medical Clinic directly for the most
+              current appointment and walk-in availability.
             </p>
           </div>
 
-          <div className="care-appointment-grid">
-            <div className="care-appointment-card primary-card">
-              <div className="care-appointment-icon">
+          <div className="care-appointment-layout-clean">
+            <div className="care-appointment-main-card">
+              <div className="care-appointment-icon large">
                 <FaPhoneAlt />
               </div>
 
-              <h3>Book by Phone</h3>
+              <h3>Call to Book or Ask About Walk-Ins</h3>
 
               <p>
-                Call the clinic for appointment requests, walk-in availability,
-                and general patient inquiries.
+                Our clinic team can help with appointment requests, provider
+                availability, walk-in questions, and new patient information.
               </p>
 
               <a
-                href="tel:19999999999"
-                className="appointment-action-btn phone-btn"
+                href={`tel:${SITE_INFO.phoneLink}`}
+                className="appointment-main-phone"
               >
                 <FaPhoneAlt />
-                Call Clinic
+                {SITE_INFO.phone}
               </a>
 
-              <div className="appointment-contact-info">
-                <FaPhoneAlt />
-                <span>999-999-9999</span>
-              </div>
+              <a
+                href={`mailto:${SITE_INFO.email}`}
+                className="appointment-main-email"
+              >
+                <FaEnvelope />
+                {SITE_INFO.email}
+              </a>
             </div>
 
-            <div className="care-appointment-card">
-              <div className="care-appointment-icon">
-                <FaWalking />
-              </div>
+            <aside className="care-appointment-side-panel">
+              <h3>Clinic Hours</h3>
 
-              <h3>Walk-Ins Welcome</h3>
-
-              <p>
-                Walk-ins are welcome. Please call ahead to confirm current
-                hours and provider availability.
-              </p>
-
-              <div className="coming-soon">
-                Availability may vary by clinic schedule.
-              </div>
-            </div>
-
-            <div className="care-appointment-card">
-              <div className="care-appointment-icon">
-                <FaUserPlus />
-              </div>
-
-              <h3>New Patient Information</h3>
-
-              <p>
-                Patient registration details will be updated once confirmed by
-                the clinic.
-              </p>
-
-              <div className="coming-soon">
-                Please call for current patient information.
-              </div>
-            </div>
-
-            <div className="care-appointment-card">
-              <div className="care-appointment-icon">
-                <FaClinicMedical />
-              </div>
-
-              <h3>Clinic Services</h3>
-
-              <p>
-                Family medicine, preventive care, pediatric care, women’s
-                health, chronic care, and immunizations may be available.
-              </p>
-
-              <div className="clinic-hours">
+              <div className="appointment-side-line">
                 <FaClock />
-                <span>Please call for clinic hours and availability.</span>
+                <span>
+                  {SITE_INFO.hours.weekdays}
+                  <br />
+                  {SITE_INFO.hours.saturday}
+                  <br />
+                  {SITE_INFO.hours.sunday}
+                </span>
               </div>
+
+              <div className="appointment-side-note">
+                Walk-ins are welcome. Please call ahead to confirm current
+                availability.
+              </div>
+            </aside>
+          </div>
+
+          <div className="care-appointment-steps">
+            <div>
+              <FaPhoneAlt />
+              <strong>1. Call Clinic</strong>
+              <span>Confirm appointment or walk-in availability.</span>
             </div>
 
-            <div className="care-appointment-card wide-card">
-              <div className="care-appointment-icon">
-                <FaEnvelope />
-              </div>
+            <div>
+              <FaUserPlus />
+              <strong>2. Share Details</strong>
+              <span>Ask about registration or patient information.</span>
+            </div>
 
-              <h3>Email Information</h3>
-
-              <p>
-                Email contact details will be added once confirmed. For now,
-                please call the clinic for appointment and patient inquiries.
-              </p>
-
-              <div className="appointment-contact-info">
-                <FaEnvelope />
-                <span>Email Coming Soon</span>
-              </div>
+            <div>
+              <FaWalking />
+              <strong>3. Visit Clinic</strong>
+              <span>Arrive during confirmed clinic availability.</span>
             </div>
           </div>
         </div>

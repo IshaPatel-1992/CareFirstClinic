@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 
 import heroImg from "../assets/banners/asset-generation-bc4c827a-7af7-4e53-bfe8-fa00bc15c284-2.png";
+import { SITE_INFO } from "../data/siteInfo";
 
 const marqueeItems = [
   "Accepting New Patients",
@@ -73,7 +74,9 @@ export default function Hero() {
               <Phone size={19} />
               <div>
                 <strong>Phone</strong>
-                <span>999-999-9999</span>
+                <a href={`tel:${SITE_INFO.phoneLink}`}>
+                  <span>{SITE_INFO.phone}</span>
+                </a>
               </div>
             </div>
 
@@ -81,7 +84,7 @@ export default function Hero() {
               <MapPin size={19} />
               <div>
                 <strong>Location</strong>
-                <span>37 - 1301 8th St SW, Airdrie, AB</span>
+                <span>{SITE_INFO.address}</span>
               </div>
             </div>
 
@@ -89,7 +92,13 @@ export default function Hero() {
               <Clock3 size={19} />
               <div>
                 <strong>Clinic Hours</strong>
-                <span>Hours will be updated soon</span>
+                <span>
+                  {SITE_INFO.hours.weekdays}
+                  <br />
+                  {SITE_INFO.hours.saturday}
+                  <br />
+                  {SITE_INFO.hours.sunday}
+                </span>
               </div>
             </div>
 
