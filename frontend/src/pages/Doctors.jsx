@@ -8,7 +8,7 @@ import {
   FaClock,
 } from "react-icons/fa";
 
-import heroVideo from "../assets/services/1090224597-preview.mp4";
+import heroImg from "../assets/banners/shutterstock_2270845943.jpg";
 
 const doctors = [
   {
@@ -44,9 +44,16 @@ export default function Doctors() {
       </section>
 
       <section className="care-doctors-hero">
-        <video className="care-doctors-hero-video" autoPlay muted loop playsInline>
+        {/* <video className="care-doctors-hero-video" autoPlay muted loop playsInline>
           <source src={heroVideo} type="video/mp4" />
-        </video>
+        </video> */ }
+
+        <img
+          src={heroImg}
+          alt="Care First Medical Clinic doctors and healthcare team"
+          className="care-doctors-hero-image"
+        />
+
 
         <div className="care-doctors-hero-overlay" />
 

@@ -1,7 +1,7 @@
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
-import logo from "../assets/LogoCareFirstClinic.png";
+import logo from "../assets/logostyle2.png";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -35,11 +35,6 @@ export default function Header() {
             alt="Care First Medical Clinic"
             className="brand-logo"
           />
-
-          <div className="brand-text">
-            <h1>Care First Medical Clinic</h1>
-            <p>Modern Family Healthcare</p>
-          </div>
         </Link>
 
         <nav className={menuOpen ? "nav open" : "nav"}>

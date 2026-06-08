@@ -8,7 +8,7 @@ import {
   FaWalking,
 } from "react-icons/fa";
 
-import heroImage from "../assets/services/banners/shutterstock_2681519119.jpg";
+import heroImage from "../assets/banners/shutterstock_1122624086.jpg";
 
 export default function Appointment() {
   return (
