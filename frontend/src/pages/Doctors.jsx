@@ -14,18 +14,31 @@ import { SITE_INFO } from "../data/siteInfo";
 
 const doctors = [
   {
-    name: "Doctor Name Coming Soon",
+    name: "Dr. Nkechi Okoro",
     title: "Family Physician",
-    credentials: "Professional details will be updated soon.",
-    description:
-      "Care First Medical Clinic is preparing updated physician profiles and clinic information.",
+    credentials:
+      "MRCGP Qualified | CFPC Certified | Nigeria & UK-Trained Physician",
+    shortBio:
+      "Dr. Okoro is a compassionate Family Physician with 14+ years of experience across Nigeria, the UK, and Canada.",
+    fullBio:
+      "Dr. Nkechi Okoro is a Nigeria and UK-trained, MRCGP qualified, and CFPC certified Family Physician with over 14 years of experience, now practicing in Alberta. She provides compassionate, patient-centred care across primary care, chronic disease management, mental health, women’s and men’s health, adolescent care, contraceptive services, and minor procedures. Dr. Okoro is committed to creating a safe, respectful space where patients feel heard, supported, and cared for.",
+    focus: [
+      "Primary Care",
+      "Chronic Disease Management",
+      "Mental Health",
+      "Women’s & Men’s Health",
+      "Minor Procedures",
+    ],
   },
   {
-    name: "Doctor Name Coming Soon",
+    name: "Dr. Emonena (Charles) Orhadje",
     title: "Family Physician",
-    credentials: "Professional details will be updated soon.",
-    description:
-      "Please contact the clinic for current physician availability and appointment information.",
+    credentials: "MD | Family Medicine | 20+ Years of Experience",
+    shortBio:
+      "Dr. Orhadje has over 20 years of experience in family medicine, general practice, and emergency care.",
+    fullBio:
+      "Dr. Emonena Orhadje was born in Delta State, Nigeria, and completed his medical studies at the University of Benin. He has practiced medicine for over 20 years across Nigeria, Saint Lucia, Saskatchewan, and Alberta. His experience includes family medicine, general practice, and emergency medicine. Dr. Orhadje enjoys putting patients at ease with humour and involving them in their healthcare decisions. His areas of focus include mental health, men’s health, and family medicine.",
+    focus: ["Family Medicine", "Mental Health", "Men’s Health", "Emergency Care"],
   },
 ];
 
@@ -111,9 +124,18 @@ export default function Doctors() {
                   </div>
                 </div>
 
-                <p className="care-doctor-description">
-                  {doctor.description}
-                </p>
+                <p className="care-doctor-description">{doctor.shortBio}</p>
+
+                <div className="care-doctor-focus">
+                  {doctor.focus.map((item) => (
+                    <span key={item}>{item}</span>
+                  ))}
+                </div>
+
+                <details className="care-doctor-details">
+                  <summary>Read Full Bio</summary>
+                  <p>{doctor.fullBio}</p>
+                </details>
 
                 <div className="care-doctor-contact">
                   <p>
